@@ -23,8 +23,7 @@ namespace WebApplicationRestAPI
         {
             //AwardsContext ac;
             string con1 = "Server=(localdb)\\mssqllocaldb;Database=usersdbstore;Trusted_Connection=True;MultipleActiveResultSets=true";
-            //string con2 = "Server=(localdb)\\mssqllocaldb;Database=usersdbstore;Trusted_Connection=True;MultipleActiveResultSets=true";
-            //con2.Database.EnsureCreated();
+           
             services.AddDbContext<UsersContext>(options => options.UseSqlServer(con1));
             services.AddDbContext<AwardsContext>(options => options.UseSqlServer(con1));
             services.AddMvc();

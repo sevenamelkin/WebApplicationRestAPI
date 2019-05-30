@@ -21,12 +21,12 @@ namespace WebApplicationRestAPI
 
         public void ConfigureServices(IServiceCollection services)
         {
-            AwardsContext ac;
+            //AwardsContext ac;
             string con1 = "Server=(localdb)\\mssqllocaldb;Database=usersdbstore;Trusted_Connection=True;MultipleActiveResultSets=true";
-            string con2 = "Server=(localdb)\\mssqllocaldb;Database=awardsdbstore;Trusted_Connection=True;MultipleActiveResultSets=true";
-            //AwardsContext.Database.EnsureCreated();
+            //string con2 = "Server=(localdb)\\mssqllocaldb;Database=usersdbstore;Trusted_Connection=True;MultipleActiveResultSets=true";
+            //con2.Database.EnsureCreated();
             services.AddDbContext<UsersContext>(options => options.UseSqlServer(con1));
-            services.AddDbContext<AwardsContext>(options => options.UseSqlServer(con2));
+            services.AddDbContext<AwardsContext>(options => options.UseSqlServer(con1));
             services.AddMvc();
 
         }

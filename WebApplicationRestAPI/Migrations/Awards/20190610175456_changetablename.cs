@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace WebApplicationRestAPI.Migrations
+namespace WebApplicationRestAPI.Migrations.Awards
 {
     public partial class changetablename : Migration
     {

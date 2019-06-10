@@ -21,13 +21,13 @@ namespace WebApplicationRestAPI.Controllers
             _contextUser = contextUser;
             if (!_contextUser.Users.Any())
             {
-                _contextUser.Users.Add(new User() { Name = "Денис", LastName = "Евдокименко", BirthDate = new DateTime(2000, 11, 08), Listawards = new List<Award> { } });
+                _contextUser.Users.Add(new User() { Name = "Денис", LastName = "Евдокименко", BirthDate = new DateTime(2000, 11, 08), Listawards = new List<Award> { /*AwardsController._contextAward.Awards[1]*/} });
                 _contextUser.Users.Add(new User() { Name = "Герман", LastName = "Алтуфьев", BirthDate = new DateTime(2004, 03, 18), Listawards = new List<Award> { } });
                 _contextUser.Users.Add(new User() { Name = "Евгений", LastName = "Парфенов", BirthDate = new DateTime(1994, 01, 01), Listawards = new List<Award> { } });
                 _contextUser.Users.Add(new User() { Name = "Петр", LastName = "Костеров", BirthDate = new DateTime(1995, 10, 08), Listawards = new List<Award> { } });
                 _contextUser.Users.Add(new User() { Name = "Семён", LastName = "Амелькин", BirthDate = new DateTime(1998, 02, 19), Listawards = new List<Award> { } });
-                _contextUser.Users.Add(new User() { Name = "Влад", LastName = "Акумов", BirthDate = new DateTime(1990, 04, 22), Listawards = new List<Award> { } });
                 _contextUser.Users.Add(new User() { Name = "Игорь", LastName = "Василенко", BirthDate = new DateTime(1995, 12, 03), Listawards = new List<Award> { } });
+                _contextUser.Users.Add(new User() { Name = "Влад", LastName = "Акумов", BirthDate = new DateTime(1990, 04, 22), Listawards = new List<Award> { } });
                 _contextUser.Users.Add(new User() { Name = "Виталий", LastName = "Астахов", BirthDate = new DateTime(1993, 05, 01), Listawards = new List<Award> { } });
                 _contextUser.SaveChanges();
             }
@@ -95,6 +95,7 @@ namespace WebApplicationRestAPI.Controllers
         }
 
         // POST: api/Users
+        
         [HttpPost]
         public async Task<IActionResult> PostUser([FromBody] User user)
         {

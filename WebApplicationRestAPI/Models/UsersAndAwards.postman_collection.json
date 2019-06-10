@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "510d1201-bdca-41ac-902a-162af79404d6",
+		"name": "UsersAndAwards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET_Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44361/api/Users/1002",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44361",
+					"path": [
+						"api",
+						"Users",
+						"1002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST_Users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"name\": \"Виктор\",\n        \"lastName\": \"Глазырев\",\n        \"birthDate\": \"2000-11-08T00:00:00\",\n    }"
+				},
+				"url": {
+					"raw": "https://localhost:44361/api/Users",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44361",
+					"path": [
+						"api",
+						"Users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT_Users",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"_listaward\": [],\n    \"id\": 1002,\n    \"name\": \"Виктор\",\n    \"lastName\": \"Глазырев\",\n    \"birthDate\": \"1999-11-08T00:00:00\",\n    \"age\": 18,\n    \"listawards\": [],\n    \"award\": \"\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44361/api/Users/1002",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44361",
+					"path": [
+						"api",
+						"Users",
+						"1002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_Users",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44361/api/Users",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44361",
+					"path": [
+						"api",
+						"Users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_Awards",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44361/api/Awards",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44361",
+					"path": [
+						"api",
+						"Awards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST_Awards",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44361/api/Awards",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44361",
+					"path": [
+						"api",
+						"Awards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT_Awards",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44361/api/Awards/5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44361",
+					"path": [
+						"api",
+						"Awards",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_Awards",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44361/api/Awards/5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44361",
+					"path": [
+						"api",
+						"Awards",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

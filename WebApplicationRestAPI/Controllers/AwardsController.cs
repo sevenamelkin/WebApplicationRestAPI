@@ -15,7 +15,7 @@ namespace WebApplicationRestAPI.Controllers
     [ApiController]
     public class AwardsController : ControllerBase
     {
-        private readonly AwardsContext _contextAward;
+        public static AwardsContext _contextAward;
 
         public AwardsController(AwardsContext contextAward)
         {
